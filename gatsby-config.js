@@ -16,7 +16,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-strapi',
       options: {
-        apiURL: 'https://powerful-basin-74882.herokuapp.com',
+        apiURL: process.env.DEPLOY_URL ? 'https://powerful-basin-74882.herokuapp.com' : 'https://localhost:1337',
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           'article',
           'user'
